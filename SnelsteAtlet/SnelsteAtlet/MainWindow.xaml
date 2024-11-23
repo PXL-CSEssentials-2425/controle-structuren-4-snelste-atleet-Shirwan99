@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="secondsTextBox" HorizontalAlignment="Left" Grid.Column="1"  Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="2">
+            <Button x:Name="newButton" Content="Nieuw" Height="50" Width="150" Margin="0 0 0 5" Click="newButten_Click"/>
+            <Button Content="Snelste atleet" Height="50" Width="150" Margin="0 0 0 5" Click="fastestButton_Click"/>
+            <Button x:Name="ClearButton" Content="Wissen" HorizontalAlignment="Center" Height="50" Width="150" Margin="0 0 0 5" Click="clearButton"/>
+            <Button x:Name="CloseButten" Content="Afsluiten" Height="50" Width="150" Margin="0 0 0 5" Click="CloseButten_Click"/>
+        </StackPanel>
+
+        <Label x:Name="Naam_atleet" Content="Naam atleet:" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="640" Height="371" Foreground="Black" BorderBrush="#FF91939A" TextChanged="resultTextBox_TextChanged" Grid.ColumnSpan="2" Margin="0,3,0,0" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"/>
+        <Label Content="Totaal aantal seconden:" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Center"/>
 
     </Grid>
 </Window>
